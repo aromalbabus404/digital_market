@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --surface: #f8fafc;
+  --surface-hover: #f1f5f9;
+  --surface-border: #e2e8f0;
+  --surface-border-hover: #84cc16;
+  --foreground: #0f172a;
+  --foreground-muted: #64748b;
+  --primary: #65a30d;
+  --primary-accent: #84cc16;
+  --primary-glow: rgba(132, 204, 22, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+::selection {
+  background-color: #bef264;
+  color: #09090b;
+}
+
+body {
+  background-color: #ffffff;
+  color: #0f172a;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar for Light Theme */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
+  border: 2px solid #f8fafc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #84cc16;
+}
+
+/* Focus styles for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #65a30d;
+  outline-offset: 2px;
+}
+
+/* Subtle light background patterns */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+}
+
+.glow-lime {
+  box-shadow: 0 10px 40px -10px rgba(132, 204, 22, 0.25);
+}
+
+.glow-lime-sm {
+  box-shadow: 0 4px 20px -2px rgba(132, 204, 22, 0.2);
+}
+
+/* Accessible reduced motion override */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
